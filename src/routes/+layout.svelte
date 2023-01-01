@@ -61,14 +61,28 @@
             color: #CCCCCC;
             font-family: 'Open Sans', sans-serif;
         }
+
+        /* for some reason, leaving this in the style block for +page.svelte doesn't work.
+        Style works on server render but not on client render. This is just a cheat to get 
+        it to work for now.*/
+        .pfp {
+            width: min(600px, 80%);
+            border-radius: 50%;
+            border: 2px #CC3E44 solid;
+            margin: 0 2em;
+        }
 	</style>
 </svelte:head>
 
-<nav>
-    <a href="/" id="logo"><div id="home" class="circle"></div></a>
+<script>
+    import { base } from "$app/paths";
+</script>
 
-    <a href="/projects"><h3>Projects</h3></a>
-    <a href="/experience"><h3>Experience</h3></a>
+<nav>
+    <a href="{base}/" id="logo"><div id="home" class="circle"></div></a>
+
+    <a href="{base}/projects"><h3>Projects</h3></a>
+    <a href="{base}/experience"><h3>Experience</h3></a>
     <!--<a href="/resume"><h3>Resume</h3></a>-->
     <!--<h3>Blog</h3>-->
 </nav>
@@ -105,11 +119,6 @@
         background-color: #CC3E44;
         height: 2em;
         width: 2em;
-    }
-
-    h1, h2, h3, h4, h5, h6, p {
-        color: #CCCCCC;
-        font-family: 'Open Sans', sans-serif;
     }
 
     footer {

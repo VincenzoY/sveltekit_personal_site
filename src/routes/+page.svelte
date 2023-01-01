@@ -1,5 +1,6 @@
 <script>
     import FauxCode from './faux_code.svelte';
+    import { base } from "$app/paths";
 </script>
 
 <div id="intro" class="slide">
@@ -15,7 +16,7 @@
         <FauxCode indent={4} line_length={24}/>
         <FauxCode line_length={28}/>
     </div>
-    <img class="portrait" src="./portrait.jpg" alt="Vincent Yee">
+    <img class="pfp" src="{base}/portrait.jpg" alt="Vincent Yee">
 </div>
 <div class="slide">
     <div class="slide_info">
@@ -100,13 +101,6 @@
         row-gap: 0.75em;
         padding: 1em 4em 1em;
         border-left: solid #CC3E44 3px;
-    }
-
-    .portrait {
-        width: min(600px, 80%);
-        border-radius: 50%;
-        border: 2px #CC3E44 solid;
-        margin: 0 2em;
     }
 
     @media (max-width: 1700px) {

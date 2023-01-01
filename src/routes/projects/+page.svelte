@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { PageData } from "./$types";
+    import { base } from "$app/paths";
 
     export let data: PageData;
 </script>
@@ -20,7 +21,7 @@
             <p>{@html project.description}</p>
         </div>
         {#if project.image }
-            <img src={project.image.src} alt={project.image.alt} class="project_image">
+            <img src={base + "/" + project.image.src} alt={project.image.alt} class="project_image">
         {/if}
     </div>
 {/each}

@@ -50,7 +50,7 @@ export const projects: Array<Project> = [
             This code is private. Available upon request.
         `,
         image: {
-            src: "./project_sources/AGE/age.gif",
+            src: "project_sources/AGE/age.gif",
             alt: "GIF displaying two games made using the game engine.",
         }
     },
