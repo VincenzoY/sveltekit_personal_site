@@ -1,10 +1,9 @@
 <script>
     import FauxCode from './faux_code.svelte';
-    import {slide} from 'svelte/transition'
 </script>
 
 <div id="intro" class="slide">
-    <div class="slide_info" transition:slide>
+    <div class="slide_info">
         <FauxCode line_length={18}/>
         <FauxCode line_length={30} />
         <FauxCode line_length={0} />
@@ -16,6 +15,7 @@
         <FauxCode indent={4} line_length={24}/>
         <FauxCode line_length={28}/>
     </div>
+    <img class="portrait" src="./portrait.jpg" alt="Vincent Yee">
 </div>
 <div class="slide">
     <div class="slide_info">
@@ -53,13 +53,7 @@
         color: #CCCCCC;
         font-size: 5em;
     }
-
-    h2 {
-        font-weight: 700;
-        color: #CCCCCC;
-        font-size: 3.5em;
-    }
-
+    
     h3 {
         font-weight: 700;
         color: #CCCCCC;
@@ -92,17 +86,39 @@
     }
 
     .slide {
-        height: 100vh;
+        height: 100%;
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        padding: 5em 4em;
     }
 
     .slide_info {
         display: flex;
         flex-direction: column;
         row-gap: 0.75em;
-        margin-left: 4em;
-        border-left: solid #CC3E44 2px;
-        padding: 0.5em 0 0.5em 3em;
+        padding: 1em 4em 1em;
+        border-left: solid #CC3E44 3px;
+    }
+
+    .portrait {
+        width: min(600px, 80%);
+        border-radius: 50%;
+        border: 2px #CC3E44 solid;
+        margin: 0 2em;
+    }
+
+    @media (max-width: 1700px) {
+        .slide {
+            flex-direction: column;
+            row-gap: 3em;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .slide_info {
+            border: none;
+        }
     }
 </style>

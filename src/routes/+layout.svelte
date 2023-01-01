@@ -65,25 +65,25 @@
 </svelte:head>
 
 <nav>
-    <a href="/"><div id="home" class="circle"></div></a>
+    <a href="/" id="logo"><div id="home" class="circle"></div></a>
 
-    <h3>Projects</h3>
-    <h3>Work</h3>
-    <h3>Contact</h3>
-    <h3>Resume</h3>
-    <h3>Blog</h3>
+    <a href="/projects"><h3>Projects</h3></a>
+    <a href="/experience"><h3>Experience</h3></a>
+    <!--<a href="/resume"><h3>Resume</h3></a>-->
+    <!--<h3>Blog</h3>-->
 </nav>
 <slot></slot>
 <footer>
-    <a href="https://github.com/VincenzoY"><i class="fa-brands fa-github">P</i></a>
-    <a href="https://github.com/VincenzoY"><i class="fa-brands fa-github">E</i></a>
-    <a href="https://github.com/VincenzoY"><i class="fa-brands fa-github">G</i></a>
-    <a href="https://www.linkedin.com/in/vincentwy/"><i class="fa-brands fa-linkedin">L</i></a>
+    <a href="mailto:vincenzoyee@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://github.com/VincenzoY" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/vincentwy/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i></a>
 </footer>
 
 <style>
     nav {
-        position: fixed;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        row-gap: 0.75em;
         padding: 1.5em 3em;
         display: flex;
         flex-direction: row;
@@ -122,22 +122,29 @@
         color: #CC3E44;
         width: 3em;
         margin: 2em 2em;
+        align-items: center;
     }
 
-    footer a:link {
+    a:link {
         text-decoration: inherit;
         color: inherit;
-    } 
+    }
 
-    footer a:visited {
+    a:visited {
         text-decoration: inherit;
         color: inherit;
+    }
+
+    nav a#logo:hover {
+        border-bottom: none;
+    }
+
+    nav a:hover{
+        border-bottom: 1px #CCCCCC solid;
     }
 
     footer a i {
         display: inline-block;
-        background-color: black;
-        height: 3em;
-        width: 3em;
+        font-size: 3em;
     }
 </style>

@@ -64,7 +64,7 @@
         {/if}
         {#each blocks as block, index}
             <div style={generateStyle(block, line_height, colours[getIntegerBetween(0, colours.length)])}
-                transition:slide="{{delay: index*150, duration: 1000}}"></div>
+                in:slide="{{delay: index*150, duration: 1000}}"></div>
         {/each}
     </div>
 {/if}
@@ -74,5 +74,7 @@
         display: flex;
         flex-direction: row;
         column-gap: 1em;
+        flex-wrap: wrap;
+        row-gap: 1em;
     }
 </style>
