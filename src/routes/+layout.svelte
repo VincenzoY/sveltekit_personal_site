@@ -67,6 +67,8 @@
         it to work for now.*/
         .pfp {
             width: min(600px, 80%);
+            display: flex;
+            align-items: flex-start;
             border-radius: 50%;
             border: 2px #CC3E44 solid;
             margin: 0 2em;

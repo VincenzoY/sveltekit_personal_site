@@ -16,7 +16,7 @@
         <FauxCode indent={4} line_length={24}/>
         <FauxCode line_length={28}/>
     </div>
-    <img class="pfp" src="{base}/portrait.jpg" alt="Vincent Yee">
+    <img class="pfp" src="./portrait.jpg" alt="Vincent Yee">
 </div>
 <div class="slide">
     <div class="slide_info">
